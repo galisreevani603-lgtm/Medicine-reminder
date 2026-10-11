@@ -1,0 +1,16 @@
+{
+  "name": "meditrack-industrial",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "concurrently \"npm:server\" \"npm:client\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed",
+    "test": "npm --prefix server test",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
+}
